@@ -1,0 +1,45 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: transparent;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #f1e3cb;
+    color: white;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    color: white;
+  }
+body{
+    background-image: url("https://wttc.org/DesktopModules/MVC/Carousel/images/693/1_20200420110734_WTTC%20TogetherInTravel%20Image.jpg");
+    background-size: cover;
+}
+
+.homepage-h1{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: 100px;
+    margin-bottom: 1px;
+}
+
+.homepage-text{
+    color: white;
+    text-align: center;
+    font-size: 21px;
+}
