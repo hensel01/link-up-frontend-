@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61f2a7e6c16cb9332178235b89d19c405435e97b
     // function getRequests() {
     //     statusContainer.style.display = "none"
     //     statusList.style.display = "none"
@@ -39,3 +43,8 @@
     //     requestDiv.appendChild(denyButton)
     //     })
     //     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 61f2a7e6c16cb9332178235b89d19c405435e97b
