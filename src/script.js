@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     receiveUserData();
 })
 
+
 function receiveUserData(){
     fetch(userURL)
     .then(response => response.json())

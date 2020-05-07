@@ -10,17 +10,21 @@ function getRequests() {
     let acceptButton = document.createElement('button')
     acceptButton.innerText = "Accept"
     acceptButton.id = "accept-btn"
+    
     acceptButton.addEventListener('click', function () {
-        // fetch('http://127.0.0.1:3000/requests', {
-        //     method: 'PATCH',
-        //     headers: {
-        //         "accepts": "application/json",
-        //         "content-type" : "application/json"
-        //     },
-        //     body: JSON.stringify({request: {attributes: {acception: true}}})       
-        // })
-        // .then(response => response.json())
-        // .then(getRequests())
+        
+        fetch('http://127.0.0.1:3000/requests', {
+            method: 'PATCH',
+            headers: {
+                "accepts": "application/json",
+                "content-type" : "application/json"
+            },
+            body: JSON.stringify({request: {attributes: {acception: true}}}),
+            // mode: "no-cors"    
+        })
+        .then(response => response.json())
+        .then(getRequests())
+
         console.log(`${request.attributes.status.content} accepted`)
     })
     let denyButton = document.createElement('button')
@@ -30,7 +34,8 @@ function getRequests() {
     })
     denyButton.id = "deny-btn"
     requestTag.className = "requests"
-    requestTag.innerText = `${request.user} has requested to join your trip to ${request.attributes.status.destination}. Status content: ${request.attributes.status.content}`
+    console.log(request)
+    requestTag.innerText = `${request.attributes.user.name} has requested to join your trip to ${request.attributes.status.destination_id}. Status content: ${request.attributes.status.content}`
     let requestDiv = document.getElementById('requests-page')
     requestDiv.appendChild(requestTag)
     requestDiv.appendChild(acceptButton)
