@@ -16,7 +16,7 @@
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #f1e3cb;
+    background-color: black;
     color: white;
   }
   
@@ -24,22 +24,72 @@
   .topnav a.active {
     color: white;
   }
+
 body{
     background-image: url("https://wttc.org/DesktopModules/MVC/Carousel/images/693/1_20200420110734_WTTC%20TogetherInTravel%20Image.jpg");
-    background-size: cover;
+      background-size: cover;
 }
 
 .homepage-h1{
-    color: white;
+    color: #937d14;
     text-align: center;
-    font-weight: bold;
-    font-size: 45px;
+    font-size: 60px;
     margin-top: 100px;
     margin-bottom: 1px;
 }
 
 .homepage-text{
-    color: white;
+    color: #937d14;
     text-align: center;
-    font-size: 21px;
+    font-size: 24px;
 }
+
+.form-group{
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.list-group-item{
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.status-image{
+  max-width: 1000px;
+  height: 300px;
+}
+/* Add a black background color to the top navigation */
+
+/* .timeline-navbar {
+  background-color: #ecdfc8;
+  overflow: hidden;
+} */
+
+/* Style the links inside the navigation bar */
+
+/* .timeline-navbar a {
+  float: left;
+  color: #df7861;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+} */
+
+/* Change the color of links on hover */
+
+/* .timeline-navbar a:hover {
+  background-color: #ecb390;
+  color: #df7861;
+}  */
+
+/* Add a color to the active/current link */
+
+/* .timeline-navbar a.active {
+  color: #df7861;
+} */
+
+
