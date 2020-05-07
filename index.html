@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div class="topnav">
-        <a >Log In</a>
+        <a>Log In</a>
         <a>Sign up</a>
     </div>
-    <!-- <div id="homepage"> 
+    <div id="homepage"> 
         <h1 class="homepage-h1">
             LinkUP
         </h1>
         <p class="homepage-text"> Join today to travel the world and meet new people!</p>
-    </div> -->
-    <div id="login-homepage">
-        <h1 class="homepage-h1">
-            LinkUP
-        </h1>
-        <ul id="login-ul">
-            <form id='inputform'>
-                <label for="fname">Username:</label><br>
-                <input type="text" id="username" name="fname"><br>
-                <label for="lname">Password:</label><br>
-                <input type="text" id="password" name="lname">
-                <button type="submit">Log in</button>
-              </form>
-        </ul>
     </div>
-    <div id="requests-page">
-        <h1>Requests:</h1>
-    </div>
+    <div id="login-div">
 
+    </div>
+    <div id="sign-up-div">
+
+    </div>
+    <div id="timeline">
+        <div class="status-container">
+            <form id="status-form">
+              <div class="form-group">
+                <input type="text" class="form-control" id="status-input-form" placeholder="Enter Status">
+                <input type="text" class="form-control" id="destination-input-form" placeholder="Enter Destination">
+                <button type="submit" id="status-post-button" >Post</button>
+              </div>
+            </form>
+        </div>
+        <div class="status-container">
+            <ul class="status-list">
+                
+            </ul>
+        </div>
+    </div>
+    <!-- <div id="requests-page">
+        <h1>Requests:</h1>
+    </div>  -->
 </body>
+
 <script type="text/javascript" src="src/script.js"></script>
+<<<<<<< HEAD
 <script type="text/javascript" src="src/requests_script.js"></script>
 </html>
+=======
+<script type="text/javascript" src="src/timeline.js"></script>
+<!-- <script type="text/javascript" src="src/requests_script.js"></script> -->
+</html>
+
+>>>>>>> 69bd74c92cc85ce1f971e22534fa56a51cbeaad8
