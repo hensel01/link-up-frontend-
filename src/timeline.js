@@ -83,7 +83,7 @@
             submitPosts()
       
     }
-renderTimeline()
+// renderTimeline()
     function submitPosts(){
        const form = document.querySelector('#status-form')
         form.addEventListener("submit", function(event){
