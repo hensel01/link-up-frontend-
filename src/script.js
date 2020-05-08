@@ -1,9 +1,10 @@
    userURL = "http://localhost:3000/users";
     statusURL = 'http://localhost:3000/statuses';
     likesURL = 'http://localhost:3000/likes'
+    followsURL = 'http://localhost:3000/follows'
     const headers = {
         "Content-Type": "application/json",
-        "Accept": "application/json"
+        "Accept": "application/json",
     }
     // receiveUserData();
     const topNav = document.querySelector(`.topnav`)
@@ -14,8 +15,15 @@
     const statusList = document.querySelector(`.status-list`)
     const statusContainer = document.querySelector(`.status-container`)
     const requestPage = document.querySelector('#requests-page')
+    const profilePage = document.querySelector('.profile-page')
+    const bioForm = document.querySelector('.bio-form')
+    let userBio = document.getElementsByClassName("bio_container")[0] 
+    const profileStatusContainer = document.querySelector('.profile-status-container')
     let likeButton;
     statusContainer.style.display = "none"
+    profilePage.style.display = "none"
+    profileStatusContainer.style.display = "none"
+
     // requestPage.style.display = "none"
 
     topNav.addEventListener(`click`, function(event){
@@ -56,8 +64,8 @@
 
     function logIn(users){
         users.data.forEach(user => {
-            console.log(user)
-            document.body.addEventListener("submit", function(event){
+        
+            loginDiv.addEventListener("submit", function(event){
                 event.preventDefault()
                 if(event.target.querySelector('#login-button').id === 'login-button' && event.target.querySelector('#username').value === user.attributes.username) {    
                     const userNavbar = event.target.parentNode.parentNode.parentNode.childNodes[1]

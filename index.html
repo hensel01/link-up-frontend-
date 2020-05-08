@@ -33,6 +33,7 @@
               <div class="form-group">
                 <input type="text" class="form-control" id="status-input-form" placeholder="Enter Status">
                 <input type="text" class="form-control" id="destination-input-form" placeholder="Enter Destination">
+                <input type="text" class="form-control" id="image-input-form" placeholder="Insert Image">
                 <button type="submit" id="status-post-button" >Post</button>
               </div>
             </form>
@@ -46,10 +47,42 @@
     <!-- <div id="requests-page">
         <h1>Requests:</h1>
     </div>  -->
+    <div class="profile-page">
+        <div class="profile_pic_div">
+            <img class= "profile_pic" src= "https://s.yimg.com/ny/api/res/1.2/12UU2JphAsbxTTDca.7QFQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9MTA4MDtoPTcxNg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2019-11/7b5b5330-112b-11ea-a77f-7c019be7ecae" alt="prof_pic" height="250" width="250">
+        </div>
+        <div class= "profile_bio">
+            <form class= "bio-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="bio"> Bio:</label><br>
+                <textarea id="bio_description" name="bio"></textarea> <br>
+                <label for="age"> Age:</label><br>
+                <input type="text" id="bio_age" name="age"><br>
+                <label for="image"> Image:</label><br>
+                <input type="text" id="bio_image" name="image"><br>
+                <button class= "bio_submit_button">Submit</button>
+            </form>
+            <container class= "bio_container">
+                <p>Name</p>
+                <p>Age</p>
+                <p>Description</p>
+                <p>Following</p>
+                <p>Followers</p>
+                <button class= "bio_button">Edit</button>
+            </container>
+        </div>
+        <div class="profile-status-container">
+            <ul class="status-list">
+                
+            </ul>
+        </div>
+
 </body>
 
 <script type="text/javascript" src="src/script.js"></script>
 <script type="text/javascript" src="src/timeline.js"></script>
 <!-- <script type="text/javascript" src="src/requests_script.js"></script> -->
+<script type="text/javascript" src="src/profile_page.js"></script>
 </html>
 
