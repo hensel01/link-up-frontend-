@@ -94,8 +94,28 @@ renderTimeline()
             const destinationInput = document.querySelector('#destination-input-form').value
             const imageInput = document.querySelector('#image-input-form').value
             submitPostList.className = "list-group-item"
-            
+            submitPostList.dataset.id = id
 
+            fetch(`${userURL}/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                let currentUserName = data.data.attributes.name
+                submitPostList.innerHTML = `
+                <h5>${currentUserName}</h5>
+                <p>
+                ${statusInput}<br>
+                Destination: ${destinationInput}
+                </p> 
+                <br>
+                <img src="${imageInput}" class="status-image">
+                <br>
+                <button class="like-button" data-id="${id}">Like Post</button>
+                <button type="submit" id="status-post-request" >Send Request</button>
+                `
+            })
+            
+            document.querySelector('.status-list').append(submitPostList)
+            
             statusOBJ = {
                 content: statusInput,
                 img_url: imageInput,
