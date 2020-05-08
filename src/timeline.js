@@ -60,9 +60,10 @@
                 likeButton.className = "like-button"
                 likeButton.dataset.id = data.id
                 
-                likeButton.addEventListener('click', function () {
+                likeButton.addEventListener('click', function (event) {
                     console.log('like')
-                    let updateLikesSpan = parseInt(document.querySelector('.likes').dataset.id)
+                    let updateLikesSpan = likesSpan
+
                     let likesCount = parseInt(updateLikesSpan.innerText)
                     likesCount += 1
                     updateLikesSpan.innerText = `${likesCount} likes`
@@ -71,7 +72,7 @@
                         user_id: userIdFromNav,
                         status_id: likeButton.dataset.id
                     }
-                    fetch(likesURL, {
+                    fetch(`${statusURL}/${likeButton.dataset.id}`, {
                         method: "POST",
                         headers: headers,
                         body: JSON.stringify(likesOBJ)
@@ -82,7 +83,7 @@
                     list.insertBefore(likeButton, list.childNodes[10])
                 })
                 submitPosts()
-      
+   
     }
 // renderTimeline()
     function submitPosts(){
