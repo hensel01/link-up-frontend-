@@ -59,7 +59,7 @@
             submitPosts()
             likePost()
     }
-
+renderTimeline()
     function submitPosts(){
        const form = document.querySelector('#status-form')
         form.addEventListener("submit", function(event){
@@ -82,16 +82,16 @@
             statusList.insertBefore(submitPostList, statusList.childNodes[1])
 
             statusOBJ = {
-                content: ,
-                img_url: ,
-                destination: ,
+                content: '',
+                img_url: '',
+                destination: '',
                 
             }
                        
-            fetch(statusURL, {
+            fetch(`${statusURL}/data`, {
             method: "POST",
             headers: headers,
-            body: JSON.stringify({})
+            body: JSON.stringify({}),
             })
             .then(response => response.json())
             .then(json => console.log(json))
