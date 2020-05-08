@@ -43,7 +43,6 @@
             <h1 class="homepage-h1">
                 LinkUP
             </h1>
-            <h3 class="login-h3">Create Your Account</h3>
             <ul id="login-ul">
                 <form id='inputform'>
                     <label for="fname">Username:</label><br>
