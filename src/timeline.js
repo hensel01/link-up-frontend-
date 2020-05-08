@@ -1,4 +1,5 @@
     function renderTimeline(){
+        timelineDiv.style.backgroundColor = "#f5eee6"
         homepageDiv.style.display = "none"
         loginDiv.style.display = "none"
         signUpDiv.style.display = "none"
@@ -17,6 +18,7 @@
         <a>Profile Page</a>
         <a>Requests</a>
         <a>Sign Out</a>`
+        homepageNavBar.style.backgroundColor = "#bb5a5a"
         
         fetch(statusURL)
         .then(response => response.json())

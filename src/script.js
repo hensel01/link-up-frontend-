@@ -19,6 +19,7 @@
     const bioForm = document.querySelector('.bio-form')
     let userBio = document.getElementsByClassName("bio_container")[0] 
     const profileStatusContainer = document.querySelector('.profile-status-container')
+    let timelineDiv = document.body.querySelector(`#timeline`)
     let likeButton;
     statusContainer.style.display = "none"
     profilePage.style.display = "none"
