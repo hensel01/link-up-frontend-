@@ -1,38 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div class="topnav">
-        <a >Log In</a>
+        <a>Log In</a>
         <a>Sign up</a>
     </div>
-    <!-- <div id="homepage"> 
+    <div id="homepage"> 
         <h1 class="homepage-h1">
             LinkUP
         </h1>
         <p class="homepage-text"> Join today to travel the world and meet new people!</p>
-    </div> -->
-    <div id="login-homepage">
-        <h1 class="homepage-h1">
-            LinkUP
-        </h1>
-        <ul id="login-ul">
-            <form id='inputform'>
-                <label for="fname">Username:</label><br>
-                <input type="text" id="username" name="fname"><br>
-                <label for="lname">Password:</label><br>
-                <input type="text" id="password" name="lname">
-                <button type="submit">Log in</button>
-              </form>
-        </ul>
     </div>
 
-</body>
-<script type="text/javascript" src="src/script.js"></script>
+    <div id="login-div">
 
+    </div>
+    <div id="sign-up-div">
+
+    </div>
+    <div id="timeline">
+        <div class="status-container">
+            <form id="status-form">
+              <div class="form-group">
+                <input type="text" class="form-control" id="status-input-form" placeholder="Enter Status">
+                <input type="text" class="form-control" id="destination-input-form" placeholder="Enter Destination">
+                <input type="text" class="form-control" id="image-input-form" placeholder="Insert Image">
+                <button type="submit" id="status-post-button" >Post</button>
+              </div>
+            </form>
+        </div>
+        <div class="status-container">
+            <ul class="status-list">
+                
+            </ul>
+        </div>
+    </div>
+    <!-- <div id="requests-page">
+        <h1>Requests:</h1>
+    </div>  -->
+    <div class="profile-page">
+        <div class="profile_pic_div">
+            <img class= "profile_pic" src= "https://s.yimg.com/ny/api/res/1.2/12UU2JphAsbxTTDca.7QFQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9MTA4MDtoPTcxNg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2019-11/7b5b5330-112b-11ea-a77f-7c019be7ecae" alt="prof_pic" height="250" width="250">
+        </div>
+        <div class= "profile_bio">
+            <form class= "bio-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="bio"> Bio:</label><br>
+                <textarea id="bio_description" name="bio"></textarea> <br>
+                <label for="age"> Age:</label><br>
+                <input type="text" id="bio_age" name="age"><br>
+                <label for="image"> Image:</label><br>
+                <input type="text" id="bio_image" name="image"><br>
+                <button class= "bio_submit_button">Submit</button>
+            </form>
+            <container class= "bio_container">
+                <p>Name</p>
+                <p>Age</p>
+                <p>Description</p>
+                <p>Following</p>
+                <p>Followers</p>
+                <button class= "bio_button">Edit</button>
+            </container>
+        </div>
+        <div class="profile-status-container">
+            <ul class="status-list">
+                
+            </ul>
+        </div>
+
+</body>
+
+<script type="text/javascript" src="src/script.js"></script>
+<script type="text/javascript" src="src/timeline.js"></script>
+<!-- <script type="text/javascript" src="src/requests_script.js"></script> -->
+<script type="text/javascript" src="src/profile_page.js"></script>
 </html>
+
