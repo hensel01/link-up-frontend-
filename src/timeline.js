@@ -4,6 +4,7 @@
         signUpDiv.style.display = "none"
         statusContainer.style.display = "block"
         displayStyle()
+ 
         document.querySelector('.topnav').addEventListener("click", function(event){
             if(event.target.innerText === "Profile Page"){
                 getProfilePage()
@@ -35,6 +36,9 @@
                 const likesSpan = document.createElement('span')
                 likesSpan.className = "likes"
                 likesSpan.dataset.id = data.id
+
+                
+
                 likesSpan.textContent = `${data.attributes.total_likes.length} likes`
  
                 list.innerHTML = `
@@ -54,10 +58,30 @@
                 likeButton.innerText = "Like Post"
                 likeButton.className = "like-button"
                 likeButton.dataset.id = data.id
+                likeButton.addEventListener('click', function () {
+                    console.log('like')
+                    let updateLikesSpan = document.querySelector('.likes')
+                let likesCount = parseInt(updateLikesSpan.innerText)
+                likesCount += 1
+                updateLikesSpan.innerText = `${likesCount} likes`
+                let userIdFromNav = document.querySelector('.topnav').dataset.id
+                debugger;
+                const likesOBJ = {
+                    user_id: userIdFromNav,
+                    status_id: likeButton.dataset.id
+                    }
+                fetch(likesURL, {
+                    method: "POST",
+                    headers: headers,
+                    body: JSON.stringify(likesOBJ)
+                })
+                .then(response => response.json())
+                .then(json => console.log(json))
+                })
                 list.insertBefore(likeButton, list.childNodes[10])
             })
             submitPosts()
-            likePost()
+      
     }
 renderTimeline()
     function submitPosts(){
@@ -87,30 +111,21 @@ renderTimeline()
             .then(response => response.json())
             form.reset()
         })
+
     }
 
-    function likePost(){
-        likeButton.addEventListener('click', function(event){
-            const id = event.target.id
-            debugger;
-            console.log(id)
-            if(event.target.className === ".likes"){
-                let updateLikesSpan = document.querySelector('.likes')
-                let likesCount = parseInt(updateLikesSpan.innerText)
-                likesCount += 1
-                updateLikesSpan.innerText = `${likesCount} likes`
-                const likesOBJ = {count: likesCount}
+    // function likePost(){
+       
+    //     likeButton.addEventListener('click', function(event){
+    //         console.log('like')
+    //         const id = event.target.id
+    //         console.log(id)
+    //         if(event.target.className === ".likes"){
+    //             console.log('like')
+                
+    //         }
+        
 
-                fetch(likesURL, {
-                    method: "PATCH",
-                    headers: headers,
-                    body: JSON.stringify(likesOBJ)
-                })
-                .then(response => response.json())
-                .then(json => console.log(json))
-            }
-        })
-    }
 
 
 // function clearPage(){

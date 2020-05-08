@@ -8,6 +8,8 @@ function getProfilePage(){
     profileStatusContainer.style.display = "block"
 
     let id = parseInt(document.querySelector('.topnav').dataset.id)
+    console.log(document.querySelector('.topnav'))
+    console.log(id)
     getUserData(id)
     getStatusData()    
 }
