@@ -4,9 +4,9 @@
         signUpDiv.style.display = "none"
         statusContainer.style.display = "block"
         displayStyle()
-        document.body.addEventListener("click", function(event){
-            if(event.target.innerText === "Requests"){
-            //    getRequests()
+        document.querySelector('.topnav').addEventListener("click", function(event){
+            if(event.target.innerText === "Profile Page"){
+                getProfilePage()
             }
         })
     }
@@ -41,7 +41,7 @@
                     <h5>${data.attributes.user.name} </h5>
                     <p>
                     ${data.attributes.content}<br>
-                    Destination: ${data.attributes.destination.name}
+                    Destination: ${data.attributes.destination}
                     </p> 
                     <br>
                     <br>
@@ -68,33 +68,23 @@
             const submitPostList = document.createElement('li');
             const statusInput = document.querySelector('#status-input-form').value
             const destinationInput = document.querySelector('#destination-input-form').value
+            const imageInput = document.querySelector('#image-input-form').value
             submitPostList.className = "list-group-item"
-
-            submitPostList.innerHTML = `
-                <h5>Bob Marks </h5>
-                <p>
-                    ${statusInput}<br>
-                    Destination: ${destinationInput}
-                </p> 
-                <span class="likes">0 likes</span><br>
-                <button type="submit" class="like-button" >Like Post</button>
-                <button type="submit" id="status-post-request" >Send Request</button>`
-            statusList.insertBefore(submitPostList, statusList.childNodes[1])
+            
 
             statusOBJ = {
-                content: ,
-                img_url: ,
-                destination: ,
-                
+                content: statusInput,
+                img_url: imageInput,
+                destination: destinationInput,
+                user_id: id
             }
                        
             fetch(statusURL, {
             method: "POST",
             headers: headers,
-            body: JSON.stringify({})
+            body: JSON.stringify(statusOBJ)
             })
             .then(response => response.json())
-            .then(json => console.log(json))
             form.reset()
         })
     }
@@ -102,6 +92,7 @@
     function likePost(){
         likeButton.addEventListener('click', function(event){
             const id = event.target.id
+            debugger;
             console.log(id)
             if(event.target.className === ".likes"){
                 let updateLikesSpan = document.querySelector('.likes')
@@ -120,3 +111,8 @@
             }
         })
     }
+
+
+// function clearPage(){
+
+// }
