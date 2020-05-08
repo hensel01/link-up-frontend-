@@ -44,6 +44,12 @@ body{
     font-size: 24px;
 }
 
+.login-h3{
+  color: #937d14;
+  font-size: 23px;
+
+}
+
 .form-group{
   max-width: 800px;
   margin-right: auto;
@@ -61,6 +67,16 @@ body{
   max-width: 1000px;
   height: 300px;
 }
+
+#login-div{
+  text-align: center;
+}
+
+#login-ul{
+  display: inline-block;
+  margin-right: 1%;
+}
+
 
 
 /* Add a black background color to the top navigation */
