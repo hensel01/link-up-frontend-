@@ -42,12 +42,13 @@
             <h1 class="homepage-h1">
                 LinkUP
             </h1>
+            <h3 class="login-h3">Create Your Account</h3>
             <ul id="login-ul">
                 <form id='inputform'>
                     <label for="fname">Username:</label><br>
                     <input type="text" id="username" name="fname"><br>
                     <label for="lname">Password:</label><br>
-                    <input type="text" id="password" name="lname">
+                    <input type="text" id="password" name="lname"><br>
                     <button id="login-button" type="submit">Log in</button>
                 </form>
             </ul>
